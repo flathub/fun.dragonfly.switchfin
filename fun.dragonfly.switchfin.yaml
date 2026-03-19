@@ -136,4 +136,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/dragonflylee/switchfin.git
-        commit: 47d97286c5e1a0290babab680b6f6442124b535c
+        commit: c8cdea35696e75d76116bc2a7dd96b7e1c2b32af
