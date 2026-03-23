@@ -1,6 +1,6 @@
 # Switchfin
 
-<img src="https://dragonflylee.github.io/switchfin/scripts/switchfin.svg" alt="icon" height="128" width="128" align="left">
+<img src="switchfin.svg" alt="icon" height="128" width="128" align="left">
 
 Switchfin is third-party PC player for Jellyfin that provides a native user interface to browse and play movies and series.
 <br>
