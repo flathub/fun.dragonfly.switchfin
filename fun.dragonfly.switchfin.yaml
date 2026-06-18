@@ -73,8 +73,8 @@ modules:
               - --disable-blacklist
             sources:
               - type: archive
-                url: https://github.com/vcrhonek/hwdata/archive/v0.407.tar.gz
-                sha256: 6a88f6f5cb510fbfaa9c49488348b7fcd7aa209b0a331f24dfebb1c8c339568b
+                url: https://github.com/vcrhonek/hwdata/archive/v0.408.tar.gz
+                sha256: ac7c34efc5941d5cbf739a8f7f6c84b1c2edea493fd3fca10906ef64d7afd690
 
       - name: libplacebo
         buildsystem: meson
@@ -124,26 +124,13 @@ modules:
               stable-only: true
               url-template: https://www.freedesktop.org/software/uchardet/releases/uchardet-$version.tar.xz
 
-  - name: glfw
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=Release
-      - -DGLFW_BUILD_EXAMPLES=OFF
-      - -DGLFW_BUILD_TESTS=OFF
-      - -DGLFW_BUILD_DOCS=OFF
-      - -DGLFW_BUILD_WAYLAND=ON
-      - -DGLFW_BUILD_X11=ON
-    sources:
-      - type: git
-        url: https://github.com/dragonflylee/glfw.git
-        commit: db08cc163dacbabfb37fb62d70ab7f62865008c6
-
   - name: switchfin
     buildsystem: cmake-ninja
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DPLATFORM_DESKTOP=ON
-      - -DUSE_SYSTEM_GLFW=ON
+      - -DUSE_SDL2=ON
+      - -DUSE_SYSTEM_SDL2=ON
       - -USE_GLES2=OFF
       - -DUSE_EGL=ON
       - -DCMAKE_INSTALL=ON
@@ -151,7 +138,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/dragonflylee/switchfin.git
-        commit: 0746728d1aaeff509d28664677169844c2ef5e43
+        tag: 0.9.1
+        commit: 902f2330420cd91ea5a76a01ca91e4603c8a0cf5
       - type: file
         path: switchfin.svg
         dest: scripts
