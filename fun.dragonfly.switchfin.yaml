@@ -73,8 +73,8 @@ modules:
               - --disable-blacklist
             sources:
               - type: archive
-                url: https://github.com/vcrhonek/hwdata/archive/v0.408.tar.gz
-                sha256: ac7c34efc5941d5cbf739a8f7f6c84b1c2edea493fd3fca10906ef64d7afd690
+                url: https://github.com/vcrhonek/hwdata/archive/v0.409.tar.gz
+                sha256: 23006accc0f931dd5187d0307a57d0744e2b8feb85e73c37bc0f5229fb31eadd
 
       - name: libplacebo
         buildsystem: meson
@@ -138,8 +138,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dragonflylee/switchfin.git
-        tag: 0.9.1
-        commit: 902f2330420cd91ea5a76a01ca91e4603c8a0cf5
+        commit: b126e25d6460d76c893faf0e9018775a55bd8d70
       - type: file
         path: switchfin.svg
         dest: scripts
