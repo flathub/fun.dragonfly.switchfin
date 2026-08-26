@@ -73,8 +73,8 @@ modules:
               - --disable-blacklist
             sources:
               - type: archive
-                url: https://github.com/vcrhonek/hwdata/archive/v0.409.tar.gz
-                sha256: 23006accc0f931dd5187d0307a57d0744e2b8feb85e73c37bc0f5229fb31eadd
+                url: https://github.com/vcrhonek/hwdata/archive/v0.410.tar.gz
+                sha256: 2864b061b179b8ad8cb6a7339ca07678240a183d9cedce8677a4950acaf798e0
 
       - name: libplacebo
         buildsystem: meson
@@ -110,8 +110,8 @@ modules:
         buildsystem: cmake-ninja
         config-opts:
           - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
-          - -DCMAKE_BUILD_TYPE=Release
-          - -DBUILD_STATIC=0
+          - -DBUILD_STATIC=OFF
+          - -DBUILD_BINARY=OFF
         cleanup:
           - /bin
         sources:
@@ -138,7 +138,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dragonflylee/switchfin.git
-        commit: 306c237b64bc0191434027e99896dd5476a80838
+        commit: b032c04d62256576d04762ef54bb22600838d775
       - type: file
         path: switchfin.svg
         dest: scripts
