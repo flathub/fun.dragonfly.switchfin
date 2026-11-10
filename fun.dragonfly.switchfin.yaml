@@ -1,6 +1,6 @@
 app-id: fun.dragonfly.switchfin
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: Switchfin
 finish-args:
@@ -37,8 +37,8 @@ modules:
       - -Dvulkan=disabled
     sources:
       - type: archive
-        url: https://github.com/mpv-player/mpv/archive/v0.41.0.tar.gz
-        sha256: ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209
+        url: https://github.com/mpv-player/mpv/archive/v0.42.0.tar.gz
+        sha256: bcfebbfa2b65a6d88dc97ea18117831072373e38b5785a2afb874ed4df5070dd
         x-checker-data:
           type: anitya
           project-id: 5348
@@ -63,8 +63,13 @@ modules:
         buildsystem: meson
         sources:
           - type: archive
-            url: https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/0.3.0/downloads/libdisplay-info-0.3.0.tar.xz
-            sha256: 6ae77cd937f9cf7d1321d35c116062c4911e8447010a6a713ac4286f7a9d5987
+            url: https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/0.4.0/downloads/libdisplay-info-0.4.0.tar.xz
+            sha256: 43b180baa143e2035654759d84e2b2f5ee77d5fe817c423838c7fe59c0d68459
+            x-checker-data:
+              type: anitya
+              project-id: 326668
+              stable-only: true
+              url-template: https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/$version/downloads/libdisplay-info-$version.tar.xz
         modules:
           - name: hwdata
             cleanup:
@@ -73,8 +78,13 @@ modules:
               - --disable-blacklist
             sources:
               - type: archive
-                url: https://github.com/vcrhonek/hwdata/archive/v0.410.tar.gz
-                sha256: 2864b061b179b8ad8cb6a7339ca07678240a183d9cedce8677a4950acaf798e0
+                url: https://github.com/vcrhonek/hwdata/archive/v0.413.tar.gz
+                sha256: 5a71ab7a48c668ef912fcfdbec046949087019f8dd7fb967445d36fbeb778350
+                x-checker-data:
+                  type: anitya
+                  project-id: 5387
+                  stable-only: true
+                  url-template: https://github.com/vcrhonek/hwdata/archive/v$version.tar.gz
 
       - name: libplacebo
         buildsystem: meson
@@ -87,8 +97,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/haasn/libplacebo.git
-            tag: v7.360.1
-            commit: cee9b076f2c63104ccfd497fa79c39a867293ec4
+            tag: v7.387.0
+            commit: 275f7dea27924cdd34ab2e6c20e448b6bc4fab65
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -131,14 +141,14 @@ modules:
       - -DPLATFORM_DESKTOP=ON
       - -DUSE_SDL2=ON
       - -DUSE_SYSTEM_SDL2=ON
-      - -USE_GLES2=OFF
+      - -DUSE_GLES2=OFF
       - -DUSE_EGL=ON
       - -DCMAKE_INSTALL=ON
     builddir: true
     sources:
       - type: git
         url: https://github.com/dragonflylee/switchfin.git
-        commit: b032c04d62256576d04762ef54bb22600838d775
+        commit: 6c1d893f96ab259e42da18e2b3c1a37f5ea7d998
       - type: file
         path: switchfin.svg
         dest: scripts
