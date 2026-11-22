@@ -148,7 +148,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dragonflylee/switchfin.git
-        commit: 6c1d893f96ab259e42da18e2b3c1a37f5ea7d998
+        commit: 5dcdcfbf2b846075c6696d1beacc3fe70f32ee89
       - type: file
         path: switchfin.svg
         dest: scripts
